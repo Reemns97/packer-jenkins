@@ -1,7 +1,7 @@
 pipeline {
   agent {
-    docker {
-      image 'hashicorp/packer'
+    dockerfile {
+      filename 'Dockerfile'
     }
 
   }
