@@ -6,12 +6,11 @@ pipeline {
 
   }
   stages {
-    stage('Checkout') {
+    stage('Validate Environment') {
       steps {
         sh '''
 ls
 pwd
-echo $CREDS
 env
 '''
       }
@@ -40,6 +39,7 @@ env
 
   }
   environment {
-    CREDS = credentials('aws-creds')
+    AWS_ACCESS_KEY_ID=credentials('aws_access_key_id')
+    AWS_SECRET_ACCESS_KEY=credentials('aws_secret_acces_key')
   }
 }
