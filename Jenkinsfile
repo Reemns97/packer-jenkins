@@ -11,6 +11,7 @@ pipeline {
         sh '''
 ls
 pwd
+echo $CREDS
 env
 '''
       }
