@@ -8,8 +8,10 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        sh '''ls
+        sh '''
+ls
 pwd
+env
 '''
       }
     }
@@ -37,6 +39,6 @@ pwd
 
   }
   environment {
-    VAR1 = 'wibble'
+    CREDS = credentials('aws-creds')
   }
 }
