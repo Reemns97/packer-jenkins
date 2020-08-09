@@ -16,7 +16,16 @@ pwd
 
     stage('build') {
       steps {
-        sh 'packer build packer.json'
+        timeout(time: 3, unit: 'MINUTES') {
+          sh 'packer build packer.json'
+        }
+
+      }
+    }
+
+    stage('Test') {
+      steps {
+        git(url: 'https://github.com/KnowledgeHut-AWS/jenkins', branch: 'master')
       }
     }
 
