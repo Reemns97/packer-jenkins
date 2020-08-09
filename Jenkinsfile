@@ -17,9 +17,6 @@ pipeline {
 
   }
   environment {
-    AWS_PROFILE = 'kh-labs'
     OWNER = 'jenkins'
-    AWS_ACCESS_KEY_ID = 'wibble'
-    AWS_SECRET_ACCESS_KEY = 'wobble'
   }
 }
