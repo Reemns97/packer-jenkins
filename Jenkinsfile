@@ -32,7 +32,7 @@ env
 
     stage('Release') {
       steps {
-        echo 'tag ami'
+        echo 'tag ami here'
       }
     }
 
