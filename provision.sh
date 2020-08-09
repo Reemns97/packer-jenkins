@@ -23,9 +23,3 @@ sudo chmod a-w /etc/systemd/system/jenkins.service
 sudo systemctl daemon-reload
 sudo systemctl enable jenkins
 sudo chmod a+rw /run/docker.sock
-#sudo docker container run -d --name jenkins --restart=always -v /home/ubuntu/jenkins_home:/var/jenkins_home -v /run/docker.sock:/var/run/docker.sock jenkinsci/blueocean
-#echo sleeping...
-#sleep 10
-#echo awake
-#sudo chmod a+r /home/ubuntu/jenkins_home/secrets/initialAdminPassword
-#echo /home/ubuntu/jenkins_home/secrets/initialAdminPassword
