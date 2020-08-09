@@ -19,9 +19,8 @@ env
     stage('build') {
       steps {
         timeout(time: 3, unit: 'MINUTES') {
-          sh 'AWS_ACCESS_KEY_ID=$CREDS_USR AWS_SECRET_ACCESS_$KEY=CREDS_PSW packer build packer.json'
+          sh 'packer build packer.json'
         }
-
       }
     }
 
