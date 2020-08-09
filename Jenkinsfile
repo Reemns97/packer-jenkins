@@ -29,5 +29,11 @@ pwd
       }
     }
 
+    stage('Release') {
+      steps {
+        echo 'tag ami'
+      }
+    }
+
   }
 }
