@@ -36,4 +36,7 @@ pwd
     }
 
   }
+  environment {
+    VAR1 = 'wibble'
+  }
 }
