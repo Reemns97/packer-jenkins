@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh '''ls
 pwd
-whoami'''
+'''
       }
     }
 
