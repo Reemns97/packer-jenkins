@@ -19,6 +19,8 @@ env
     stage('build') {
       steps {
         timeout(time: 3, unit: 'MINUTES') {
+          AWS_ACCESS_KEY_ID=CREDS_USR
+          AWS_SECRET_ACCESS_KEY=CREDS_PSW
           sh 'packer build packer.json'
         }
 
@@ -39,7 +41,6 @@ env
 
   }
   environment {
-    AWS_ACCESS_KEY_ID=credentials('aws_access_key_id')
-    AWS_SECRET_ACCESS_KEY=credentials('aws_secret_acces_key')
+    CREDS=credentials('aws-creds')
   }
 }
