@@ -8,7 +8,15 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        sh 'ls'
+        sh '''ls
+pwd
+whoami'''
+      }
+    }
+
+    stage('build') {
+      steps {
+        sh 'packer build packer.json'
       }
     }
 
